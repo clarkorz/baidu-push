@@ -1,3 +1,5 @@
+[![NPM](https://nodei.co/npm/baidu-push.png?downloads=true)](https://nodei.co/npm/baidu-push/)
+
 ### baidu-push
 
 node.js sdk for baidu push service
