@@ -71,7 +71,7 @@ describe('test baidu push', function () {
       user_id: userId
     }
 
-    client.queryUserTag(option, function (error, result) {
+    client.queryTag(option, function (error, result) {
       if (error) console.log(error);
 
       result.response_params.tag_num.should.above(-1);
@@ -154,7 +154,7 @@ describe('test baidu push', function () {
       user_id: userId
     }
 
-    client.queryUserTag(option, function (error, result) {
+    client.queryTag(option, function (error, result) {
       if (error) console.log(error);
 
       result.response_params.tag_num.should.above(-1);

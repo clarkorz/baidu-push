@@ -1,6 +1,6 @@
 {
   "name": "baidu-push",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "node.js sdk for baidu push service",
   "main": "index.js",
   "scripts": {
@@ -19,9 +19,7 @@
     "cloud"
   ],
   "author": "haoxin",
-  "license": "BSD",
-  "readmeFilename": "README.md",
-  "gitHead": "328e94c4de46f376844d2b57ed11cb9aee098307",
+  "license": "BSD-2-Clause",
   "devDependencies": {
     "should": "~1.3.0"
   },
@@ -31,5 +29,6 @@
   "dependencies": {},
   "bugs": {
     "url": "https://github.com/coderhaoxin/baidu-push/issues"
-  }
+  },
+  "homepage": "https://github.com/coderhaoxin/baidu-push"
 }

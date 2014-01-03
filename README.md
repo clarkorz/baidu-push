@@ -69,7 +69,7 @@ client.setTag(option, function(error, result) {
 var option = {
   user_id: userId
 }
-client.queryUserTag(option, function (error, result) {})
+client.queryTag(option, function (error, result) {})
 ```
 
 删除user的tag
