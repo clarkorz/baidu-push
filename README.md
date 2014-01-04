@@ -14,16 +14,16 @@ npm install baidu-push
 * [参考代码](test/test.js)
 
 ```js
-var Push = require('baidu-push');
+var Push = require('baidu-push')
 
-var userId = 'a userId';
+var userId = 'a userId'
 
 var pushOption = {
   apiKey: 'your api key',
   secretKey: 'your secret key'
 }
 
-var client = new Push(pushOption);
+var client = new Push(pushOption)
 ```
 
 根据 userId 向某一 user 推送消息
@@ -31,12 +31,12 @@ var client = new Push(pushOption);
 var option = {
   push_type: 1,
   user_id: userId,
-  messages: ["hello"],//if version <= 0.03; should use: JSON.stringify(["hello"])
-  msg_keys: ["title"] //if version <= 0.03; should use: JSON.stringify(["title"])
+  messages: ["hello"],
+  msg_keys: ["title"]
 }
 
 client.pushMessage(option, function(error, result) {
-  if (error) console.log(error);
+  if (error) console.log(error)
 })
 ```
 
@@ -45,11 +45,11 @@ client.pushMessage(option, function(error, result) {
 var option = {
   push_type: 2,
   tag: testTag.name,
-  messages: ["push by tag"],//if version <= 0.03; should use: JSON.stringify(["push by tag"])
-  msg_keys: ["title"]       //if version <= 0.03; should use: JSON.stringify(["title"])
+  messages: ["push by tag"],
+  msg_keys: ["title"]
 }
 client.pushMessage(option, function(error, result) {
-  if (error) return console.log(error);
+  if (error) return console.log(error)
 })
 ```
 
@@ -60,7 +60,7 @@ var option = {
   user_id: userId
 }
 client.setTag(option, function(error, result) {
-  if (error) return console.log(error);
+  if (error) return console.log(error)
 })
 ```
 
