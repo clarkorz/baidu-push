@@ -85,6 +85,9 @@ function request(bodyArgs, path, secretKey, id, host, callback) {
 		})
 
 		res.on('end', function () {
+      // fix user_id too precision than ECMA5 Javascript defination
+      resBody = resBody.replace(new RegExp(':' + bodyArgs.user_id + '(?!")', 'g'), ':"' + bodyArgs.user_id + '"');
+
 			try {
 				var jsonObj = JSON.parse(resBody)
 			} catch (e) {
@@ -93,7 +96,9 @@ function request(bodyArgs, path, secretKey, id, host, callback) {
 			var errObj = null
 			id.request_id = jsonObj['request_id']
 			if (res.statusCode !== 200) {
-				errObj = new Error(jsonObj)
+				errObj = new Error(jsonObj['error_msg']);
+        errObj.error_msg = jsonObj['error_msg'];
+        errObj.error_code = jsonObj['error_code'];
 			}
 			callback(errObj, jsonObj)
 		})
